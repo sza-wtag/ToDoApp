@@ -22,7 +22,8 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+     "strictPropertyInitialization":false  //added to resolve->  '...' has no initializer and is not definitely assigned in the constructor
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

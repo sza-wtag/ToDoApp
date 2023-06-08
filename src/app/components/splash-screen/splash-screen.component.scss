@@ -1,0 +1,80 @@
+.app-splash-screen {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    transition: left 0.5s;
+}
+.app-splash-screen-inner{
+    display: flex;  
+    align-items: center; 
+}
+
+.app-label{
+    color: #7A8DFD;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 112px;
+    height: 112px;
+    text-align: center;
+}
+
+.app-logo img{
+    width: 153.78px;
+    height: 153.93px
+}
+
+// Small devices 
+@media (max-width: 768px) {  
+    .app-label{
+        color: #7A8DFD;
+        font-weight: 300;
+        font-size: 56px;
+        text-align: center;
+    }
+
+    .app-logo img{
+        width: 103.78px;
+        height: 103.93px
+    }
+ }
+
+// Medium devices 
+@media ( (min-width:768px) and (max-width: 1024px)) {
+    .app-label{
+        color: #7A8DFD;
+        font-weight: 500;
+        font-size: 76px;
+        text-align: center;
+    }
+
+    .app-logo img{
+        width: 123.78px;
+        height: 123.93px
+    }
+ }
+
+// Large devices 
+@media (min-width: 1024px) { 
+    .app-label{
+        color: #7A8DFD;
+        font-weight: 700;
+        font-size: 96px;
+        line-height: 112px;
+        height: 112px;
+        text-align: center;
+    }
+
+    .app-logo img{
+        width: 153.78px;
+        height: 153.93px
+    }
+ }
