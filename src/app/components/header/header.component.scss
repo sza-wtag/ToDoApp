@@ -1,70 +1,73 @@
-.header{
+@import "src/styles/_variables.scss";
+@import "src/styles/_colors.scss";
+
+.header {
     width: 100%;
-    height: 72px;
+    height: $sp-72;
     box-sizing: border-box;
     position: absolute;
     left: 0%;
     right: 0%;
     top: 0%;
     bottom: 0%;
-    padding-right: 150px;
-    padding-left: 150px;
-    background: #FFFFFF;
-    border: 1px solid #DDE2FF;
-    border-radius: 5px;
+    padding-right: $sp-150;
+    padding-left: $sp-150;
+    background: $white;
+    border: $sp-1 solid $grey;
+    border-radius: $sp-5;
 }
 
-.header-content{
+.header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
 }
-.header-logo-label{
+.header-logo-label {
     display: flex;
     vertical-align: middle;
 }
-.header-label{
-    font-size: 36px;
-    color: #7A8DFD;
-    padding-left: 14px;
+.header-label {
+    font-size: $sp-36;
+    color: $blue;
+    padding-left: $sp-14;
 }
-.header-search button{
-    background-color: white;
+.header-search button {
+    background-color: $white;
     border: none;
 }
-.header-search img{
-    height: 24px;
+.header-search img {
+    height: $sp-24;
 }
 
 // Small devices 
 @media (max-width: 768px) { 
     .header{
-        height: 56px;
-        padding-right: 20px;
-        padding-left: 20px;
+        height: $sp-56;
+        padding-right: $sp-20;
+        padding-left: $sp-20;
     }
-    .header-label{
-        font-size: 26px;
-        color: #7A8DFD;
-        padding-left: 8px;
+    .header-label {
+        font-size: $sp-26;
+        color: $blue;
+        padding-left: $sp-8;
     }
  }
 
 // Medium devices 
 @media ( (min-width:768px) and (max-width: 1024px)) {
-    .header{
-        height: 72px;
-        padding-right: 70px;
-        padding-left: 70px;
+    .header {
+        height: $sp-72;
+        padding-right: $sp-70;
+        padding-left: $sp-70;
     }
  }
 
 // Large devices 
 @media (min-width: 1024px) { 
-    .header{
-        height: 72px;
-        padding-right: 150px;
-        padding-left: 150px;
+    .header {
+        height: $sp-72;
+        padding-right: $sp-150;
+        padding-left: $sp-150;
     }
  }

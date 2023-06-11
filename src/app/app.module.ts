@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SplashScreenComponent } from './components/splash-screen/splash-screen.component';
 import { HeaderComponent } from './components/header/header.component';
+import { UtilityService } from './services/utility.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [UtilityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

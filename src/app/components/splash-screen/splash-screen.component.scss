@@ -1,3 +1,6 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_colors.scss";
+
 .app-splash-screen {
     background-color: white;
     position: fixed;
@@ -13,68 +16,68 @@
     z-index: 100;
     transition: left 0.5s;
 }
-.app-splash-screen-inner{
+.app-splash-screen-inner {
     display: flex;  
     align-items: center; 
 }
 
-.app-label{
-    color: #7A8DFD;
+.app-label {
+    color: $blue;
     font-weight: 700;
-    font-size: 96px;
-    line-height: 112px;
-    height: 112px;
+    font-size: $sp-96;
+    line-height: $sp-112;
+    height: $sp-112;
     text-align: center;
 }
 
-.app-logo img{
-    width: 153.78px;
-    height: 153.93px
+.app-logo img {
+    width: $sp-153;
+    height: $sp-153;
 }
 
 // Small devices 
 @media (max-width: 768px) {  
-    .app-label{
-        color: #7A8DFD;
+    .app-label {
+        color: $blue;
         font-weight: 300;
-        font-size: 56px;
+        font-size: $sp-56;
         text-align: center;
     }
 
-    .app-logo img{
-        width: 103.78px;
-        height: 103.93px
+    .app-logo img {
+        width: $sp-103;
+        height: $sp-103;
     }
  }
 
 // Medium devices 
 @media ( (min-width:768px) and (max-width: 1024px)) {
-    .app-label{
-        color: #7A8DFD;
+    .app-label {
+        color: $blue;
         font-weight: 500;
-        font-size: 76px;
+        font-size: $sp-76;
         text-align: center;
     }
 
-    .app-logo img{
-        width: 123.78px;
-        height: 123.93px
+    .app-logo img {
+        width: $sp-123;
+        height: $sp-123;
     }
  }
 
 // Large devices 
 @media (min-width: 1024px) { 
-    .app-label{
-        color: #7A8DFD;
+    .app-label {
+        color: $blue;
         font-weight: 700;
-        font-size: 96px;
-        line-height: 112px;
-        height: 112px;
+        font-size: $sp-96;
+        line-height: $sp-112;
+        height: $sp-112;
         text-align: center;
     }
 
-    .app-logo img{
-        width: 153.78px;
-        height: 153.93px
+    .app-logo img {
+        width: $sp-153;
+        height: $sp-153;
     }
  }
