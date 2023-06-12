@@ -1,80 +1,50 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_colors.scss";
+@import "src/styles/_mixins.scss";
+
 .app-splash-screen {
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+    @include backgroundPosition($white, fixed, 0);
+    @include displayAlign(flex, center, center);
+    @include dimension(100%, 100%);
     z-index: 100;
     transition: left 0.5s;
 }
-.app-splash-screen-inner{
+.app-splash-screen-inner {
     display: flex;  
     align-items: center; 
 }
-
-.app-label{
-    color: #7A8DFD;
-    font-weight: 700;
-    font-size: 96px;
-    line-height: 112px;
-    height: 112px;
-    text-align: center;
+.app-label {
+    @include appLabelStyle(700, $sp-96);
+    height: $sp-112;
 }
-
-.app-logo img{
-    width: 153.78px;
-    height: 153.93px
+.app-logo img {
+    @include dimension($sp-153, $sp-153);
 }
-
 // Small devices 
 @media (max-width: 768px) {  
-    .app-label{
-        color: #7A8DFD;
-        font-weight: 300;
-        font-size: 56px;
-        text-align: center;
+    .app-label {
+        @include appLabelStyle(300, $sp-56);
     }
-
-    .app-logo img{
-        width: 103.78px;
-        height: 103.93px
+    .app-logo img {
+        @include dimension($sp-103, $sp-103);
     }
  }
-
 // Medium devices 
 @media ( (min-width:768px) and (max-width: 1024px)) {
-    .app-label{
-        color: #7A8DFD;
-        font-weight: 500;
-        font-size: 76px;
-        text-align: center;
+    .app-label {
+        @include appLabelStyle(500, $sp-76);
     }
-
-    .app-logo img{
-        width: 123.78px;
-        height: 123.93px
+    .app-logo img {
+        @include dimension($sp-123, $sp-123);
     }
  }
-
 // Large devices 
 @media (min-width: 1024px) { 
-    .app-label{
-        color: #7A8DFD;
-        font-weight: 700;
-        font-size: 96px;
-        line-height: 112px;
-        height: 112px;
-        text-align: center;
+    .app-label {
+        @include appLabelStyle(700, $sp-96);
+        height: $sp-112; 
     }
-
-    .app-logo img{
-        width: 153.78px;
-        height: 153.93px
+    .app-logo img {
+        @include dimension($sp-153, $sp-153);
     }
  }
