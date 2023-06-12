@@ -1,0 +1,31 @@
+<div class="home-container">
+    <div class="home-top">
+        <h1 class="add-task-label">Add Task</h1>
+        <div class="home-top-buttons">
+            <div class="create-button">
+                <button (click)="showAddTaskCard()">＋ Create</button>
+            </div>
+            <div class="filter-buttons">
+
+            </div>
+        </div>
+    </div>
+    <div class="task-cards-container" >
+        <div class="add-task-card task-card" *ngIf="show">
+            <textarea id="task_name_input" rows="5" cols="33" [(ngModel)]="task_name"></textarea> 
+            <div class="task-card-buttons">
+                <button type="submit" (click) ="addTask()" id="add-task-button">Add Task</button>
+                <button (click)="hideAddTaskCard()"><img alt="My image name" src="../../../assets/icons/delete.svg"></button>
+            </div>
+        </div>
+        <div class="task-card" *ngFor="let task of tasks; let i=index">
+            <h2 id="task-name">{{task.name}}</h2>
+            <p id="task-time">{{task.time}}</p>
+            <div class="task-card-buttons">
+                <button><img alt="My image name" src="../../../assets/icons/done.svg"></button>
+                <button><img alt="My image name" src="../../../assets/icons/edit.svg"></button>
+                <button><img alt="My image name" src="../../../assets/icons/delete.svg"></button>
+            </div>
+        </div>
+    </div>
+</div>
