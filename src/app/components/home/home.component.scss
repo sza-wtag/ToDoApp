@@ -1,34 +1,38 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_colors.scss";
+@import "src/styles/_mixins.scss";
 
 .home-container {
-    margin-top: 137px;
-    margin-right: 150px;
-    margin-bottom: 0px;
-    margin-left: 150px;
+    margin: $sp-137 $sp-150 0 $sp-150;
     padding: 0;
 }
 .home-top {
-    margin-bottom: 14px;
+    margin-bottom: $sp-14;
 }
 .add-task-label {
-    font-size: 30px;
+    font-size: $sp-30;
 }
 .create-button button {
-    color:#FFFFFF;
-    background-color:#7A8DFD;
-    border-radius: 5px;
-    border: 1px solid #D1D8FF;
-    padding: 8px
+    color:$white;
+    @include buttonCard($sp-8);
+    background-color:$blue;
 }
 .task-cards-container { 
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* you can change 1fr to whatever you want, 200px for example*/
     gap: 2rem;
 }
+#add-one-task-icon {
+    @include displayAlign(flex, center, center);
+    margin-top: $sp-36;
+}
+#add-one-task-icon button{
+   background-color: #F8F9FF;
+   border: none;
+
+}
 .task-card {
-    padding: 15px;
-    background: #FFFFFF;
-    border: 1px solid #DDE2FF;
-    border-radius: 5px;
+    @include buttonCard($sp-14);
 }
 #task-name {
     margin-top: 0;
@@ -37,7 +41,7 @@
 #task-time {
     font-size: 14px;
     line-height: 16px;
-    color: #BBBDD0;
+    color: $secondaryTextGrey;
 }
 .task-card-buttons {
     display: flex;
@@ -46,17 +50,14 @@
     border: none;
     margin-right: 26px;
     width: 24px;
-    background-color: #FFFFFF;
+    background-color: $white;
+   
 }
 #task_name_input {
-    background: #FFFFFF;
-    border: 3px solid #D1D8FF;
-    border-radius: 5px;
+    @include buttonCard($sp-5);
+    border: $sp-3 solid $borderGrey;
 }
 #add-task-button {
-    padding: 15px;
-    background: #FFFFFF;
-    border: 1px solid #DDE2FF;
-    border-radius: 5px;
+    @include buttonCard($sp-14);
     width: fit-content;
 }

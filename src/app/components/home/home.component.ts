@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Task } from './../../models/task.model';
+import { Component, OnInit } from '@angular/core';
 import { formatDate } from '@angular/common';
+import { TaskService } from 'src/app/services/task.service';
+import { UtilityService } from 'src/app/services/utility.service';
 
 @Component({
   selector: 'app-home',
@@ -7,14 +10,13 @@ import { formatDate } from '@angular/common';
   styleUrls: ['./home.component.scss'],
 
 })
-export class HomeComponent {
-    tasks = [
-      { name:"Task1", time:"21.02.22", status: "undone"},
-      { name:"Task2", time:"21.02.22", status: "undone"},
-      { name:"Task3", time:"21.02.22", status: "undone"},
-      { name:"Task4", time:"21.02.22", status: "undone"},
-    ]
-    show = false;
+export class HomeComponent implements OnInit{
+
+    constructor(private _taskService: TaskService , private _utilityService: UtilityService){}
+    img_text = '';
+    tasks:Task[] = [];
+    task: Task = new Task();
+    show = this._utilityService.SHOW_SPLASH;
     showAddTaskCard(){
       this.show = true
     }
@@ -22,13 +24,27 @@ export class HomeComponent {
     task_name : any
     currentDate = formatDate(new Date(), 'dd.MM.YY', 'en');
     
-    addTask(){
-      this.tasks.push({name:this.task_name,time:this.currentDate,status: "undone"});
-      this.task_name=""
-      alert("New Tast Added!")
-      this.show = false
+    onAddTask(){
+      this.task_name = this.task_name.replace(/^\s+|\s+$/gm, '').trim();
+      if(this.task_name){
+        const newTask: Task = {
+          id: this.task.id,
+          name: this.task_name,
+          status: this.task.status,
+          createDate: this.task.createDate
+        }
+        this._taskService.addTask(newTask);
+      }
+      this.task_name= "";
+      this.show= false;
     }
     hideAddTaskCard(){
-      this.show = false
+      this.show = false;
+      this.task_name= "";
     }
+    ngOnInit(): void {
+      this.tasks = this._taskService.getTasks();
+      this.img_text = this._utilityService.IMG_TEXT
+    }
+  
 }

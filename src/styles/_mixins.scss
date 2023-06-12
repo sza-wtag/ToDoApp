@@ -35,3 +35,10 @@
     height: $height;
     width: $width;
 }
+@mixin buttonCard($padding){
+    padding: $padding;
+    background: $white;
+    border: $sp-1 solid $borderGrey;
+    border-radius: $sp-5;
+}
+
