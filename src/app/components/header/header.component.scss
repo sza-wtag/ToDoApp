@@ -2,7 +2,7 @@
 @import "src/styles/_variables.scss";
 @import "src/styles/_colors.scss";
 
-.header{
+.header {
     @include headerStyle($sp-72, $sp-150, $sp-150);
     @include backgroundPosition($white, absolute, 0);
     border: $sp-1 solid $grey;
