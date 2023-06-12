@@ -1,18 +1,11 @@
 @import "src/styles/_variables.scss";
 @import "src/styles/_colors.scss";
+@import "src/styles/_mixins.scss";
 
 .app-splash-screen {
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+    @include backgroundPosition($white, fixed, 0);
+    @include displayAlign(flex, center, center);
+    @include dimension(100%, 100%);
     z-index: 100;
     transition: left 0.5s;
 }
@@ -20,64 +13,38 @@
     display: flex;  
     align-items: center; 
 }
-
 .app-label {
-    color: $blue;
-    font-weight: 700;
-    font-size: $sp-96;
-    line-height: $sp-112;
+    @include appLabelStyle(700, $sp-96);
     height: $sp-112;
-    text-align: center;
 }
-
 .app-logo img {
-    width: $sp-153;
-    height: $sp-153;
+    @include dimension($sp-153, $sp-153);
 }
-
 // Small devices 
 @media (max-width: 768px) {  
     .app-label {
-        color: $blue;
-        font-weight: 300;
-        font-size: $sp-56;
-        text-align: center;
+        @include appLabelStyle(300, $sp-56);
     }
-
     .app-logo img {
-        width: $sp-103;
-        height: $sp-103;
+        @include dimension($sp-103, $sp-103);
     }
  }
-
 // Medium devices 
 @media ( (min-width:768px) and (max-width: 1024px)) {
     .app-label {
-        color: $blue;
-        font-weight: 500;
-        font-size: $sp-76;
-        text-align: center;
+        @include appLabelStyle(500, $sp-76);
     }
-
     .app-logo img {
-        width: $sp-123;
-        height: $sp-123;
+        @include dimension($sp-123, $sp-123);
     }
  }
-
 // Large devices 
 @media (min-width: 1024px) { 
     .app-label {
-        color: $blue;
-        font-weight: 700;
-        font-size: $sp-96;
-        line-height: $sp-112;
-        height: $sp-112;
-        text-align: center;
+        @include appLabelStyle(700, $sp-96);
+        height: $sp-112; 
     }
-
     .app-logo img {
-        width: $sp-153;
-        height: $sp-153;
+        @include dimension($sp-153, $sp-153);
     }
  }
