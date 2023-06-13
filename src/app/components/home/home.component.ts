@@ -38,6 +38,10 @@ export class HomeComponent implements OnInit{
       this.task_name= "";
       this.show= false;
     }
+    onDeleteTask(deleteTaskId: number){
+      this._taskService.deleteTask(deleteTaskId);
+      console.log("delete")
+    }
     hideAddTaskCard(){
       this.show = false;
       this.task_name= "";

@@ -24,7 +24,7 @@
             <div class="task-card-buttons">
                 <button><img alt={{img_text}} src="../../../assets/icons/done.svg"></button>
                 <button><img alt={{img_text}} src="../../../assets/icons/edit.svg"></button>
-                <button><img alt={{img_text}} src="../../../assets/icons/delete.svg"></button>
+                <button (click)="onDeleteTask(task.id)"><img alt={{img_text}} src="../../../assets/icons/delete.svg"></button>
             </div>
         </div>
     </div>

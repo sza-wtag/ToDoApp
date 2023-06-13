@@ -5,12 +5,14 @@ import { Task } from '../models/task.model';
   providedIn: 'root'
 })
 export class TaskService {
-
+  
   tasksArray : Task[] = [];
   addTask (task: Task){
     this.tasksArray.unshift(task)
   }
-
+  deleteTask (deleteTaskId: number){
+    this.tasksArray.splice(deleteTaskId,1);
+  }
   getTasks(){
     return this.tasksArray
   }
