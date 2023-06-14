@@ -2,7 +2,7 @@
     <app-home-top (showEvent)="showAddTaskCard()"></app-home-top>
     <div class="task-cards-container" >
         <div class="add-task-card task-card" *ngIf="show">
-            <textarea class="task_name_input" rows="5" cols="33" [(ngModel)]="task_name"></textarea> 
+            <textarea class="task_name_input" rows="5" cols="33" [(ngModel)]="taskName"></textarea> 
             <div class="task-card-buttons">
                 <button (click)="onAddTask()" class="add-task-button">Add Task</button>
                 <button (click)="hideAddTaskCard()" class="task-card-button"><fa-icon class="icon-style" [icon]="faDelete"></fa-icon> </button>
@@ -19,6 +19,6 @@
         </div>
     </div>
     <div class="add-one-task-icon" *ngIf="tasks.length <= 0 && !show">
-        <button (click)="showAddTaskCard()"><img  alt={{img_text}} src="../../../assets/icons/addOne.svg"></button>
+        <button (click)="showAddTaskCard()"><img  alt={{imgText}} src="../../../assets/icons/addOne.svg"></button>
     </div>
 </div>

@@ -14,10 +14,10 @@ import { UtilityService } from 'src/app/services/utility.service';
 
 export class HomeComponent implements OnInit{
 
-  img_text = '';
+  imgText = '';
   show = this._utilityService.SHOW_SPLASH;
   tasks : ITask[] = [];
-  task_name : string;
+  taskName : string;
   //icons
   faDelete = faTrash;
   faDone = faCheck;
@@ -30,22 +30,22 @@ export class HomeComponent implements OnInit{
   }
   
   onAddTask() {
-    this.task_name = this.task_name.replace(/^\s+|\s+$/gm, '').trim();
-    if(this.task_name){
-      this._taskService.addTask(this._taskFactoryService.createTask(this.task_name));
+    this.taskName = this.taskName.replace(/^\s+|\s+$/gm, '').trim();
+    if(this.taskName){
+      this._taskService.addTask(this._taskFactoryService.createTask(this.taskName));
     }
-    this.task_name= "";
+    this.taskName= "";
     this.show= false;
   }
 
   hideAddTaskCard() { 
     this.show = false;
-    this.task_name= "";
+    this.taskName= "";
   }
 
   ngOnInit(): void {
     this.tasks = this._taskService.getTasks();
-    this.img_text = this._utilityService.IMG_TEXT
+    this.imgText = this._utilityService.IMG_TEXT
   }
 
 }

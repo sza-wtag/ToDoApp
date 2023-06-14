@@ -7,9 +7,9 @@ import { UtilityService } from 'src/app/services/utility.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public img_text = ''
+  public imgText = ''
   constructor(private _utilityService: UtilityService){}
     ngOnInit(){
-      this.img_text = this._utilityService.IMG_TEXT
+      this.imgText = this._utilityService.IMG_TEXT
   }
 }

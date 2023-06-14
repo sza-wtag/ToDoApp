@@ -18,6 +18,6 @@ export class HomeTopComponent {
   @Output() showEvent = new EventEmitter<boolean>();
 
   showAddTaskCard()  {
-    this. showEvent.emit(true);
+    this.showEvent.emit(true);
   }
 }
