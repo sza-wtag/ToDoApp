@@ -9,9 +9,9 @@ import { UtilityService } from 'src/app/services/utility.service';
 })
 export class SplashScreenComponent implements OnInit , OnDestroy {
   windowWidth: string;
-  show_splash:boolean;
-  img_text: string;
-  timeOutIDs:number[] = [];
+  showSplash: boolean;
+  imgText: string;
+  timeOutIDs: number[] = [];
   imageUrl = "../../../assets/icons";
 
   constructor(private _utilityService: UtilityService){}
@@ -21,8 +21,8 @@ export class SplashScreenComponent implements OnInit , OnDestroy {
       window.setTimeout (() => this.windowWidth ='-' + window.innerWidth + 'px',2000)
     );
    
-    this.img_text = this._utilityService.IMG_TEXT;
-    this.show_splash = this._utilityService.SHOW_SPLASH;
+    this.imgText = this._utilityService.IMG_TEXT;
+    this.showSplash = this._utilityService.SHOW_SPLASH;
   }
  
   ngOnDestroy() {

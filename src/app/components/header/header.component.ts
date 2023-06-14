@@ -9,7 +9,9 @@ import { UtilityService } from 'src/app/services/utility.service';
 export class HeaderComponent implements OnInit {
   imgText = ''
   imageUrl = "../../../assets/icons"
+
   constructor(private _utilityService: UtilityService){}
+  
     ngOnInit(){
       this.imgText = this._utilityService.IMG_TEXT
   }
