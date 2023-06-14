@@ -1,15 +1,5 @@
 <div class="home-container">
-    <div class="home-top">
-        <h1 class="add-task-label">Add Task</h1>
-        <div class="home-top-buttons">
-            <div class="create-button">
-                <button (click)="showAddTaskCard()"><fa-icon [icon]="faPlus"></fa-icon> Create</button>
-            </div>
-            <div class="filter-buttons">
-
-            </div>
-        </div>
-    </div>
+    <app-home-top (showEvent)="showAddTaskCard()"></app-home-top>
     <div class="task-cards-container" >
         <div class="add-task-card task-card" *ngIf="show">
             <textarea class="task_name_input" rows="5" cols="33" [(ngModel)]="task_name"></textarea> 

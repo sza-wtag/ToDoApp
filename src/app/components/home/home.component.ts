@@ -1,6 +1,6 @@
 import { ITask } from './../../models/task.model';
 import { TaskFactoryService } from './../../services/task-factory.service';
-import { faPlus, faTrash, faCheck, faPen} from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faCheck, faPen} from '@fortawesome/free-solid-svg-icons';
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from 'src/app/services/task.service';
 import { UtilityService } from 'src/app/services/utility.service';
@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit{
   tasks : ITask[] = [];
   task_name : string;
   //icons
-  faPlus = faPlus;
   faDelete = faTrash;
   faDone = faCheck;
   faEdit = faPen;

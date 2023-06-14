@@ -7,20 +7,6 @@
     padding: 0;
 }
 
-.home-top {
-    margin-bottom: $sp-14;
-}
-
-.add-task-label {
-    font-size: $sp-30;
-}
-
-.create-button button {
-    color:$white;
-    @include buttonCard($sp-8);
-    background-color:$blue;
-}
-
 .task-cards-container { 
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* you can change 1fr to whatever you want, 200px for example*/
