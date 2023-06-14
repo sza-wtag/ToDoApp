@@ -61,17 +61,18 @@
     @include buttonCard($sp-14);
     width: fit-content;
 }
-.delete-task-button  {
-    border: none;
-    margin-right: 26px;
-    width: 24px;
-    background-color: $white;
-}
 
 .task-card-buttons {
     display: flex;
-    border: none;
-    margin-right: 26px!important;
-    width: 24px;
+}
+
+.task-card-button {
     background-color: $white;
+    border: none;   
+}
+
+.icon-style {
+    margin-right: 26px!important;
+    font-size: 24px;
+    color: $secondaryTextGrey;
 }

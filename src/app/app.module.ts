@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { UtilityService } from './services/utility.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UtilityService } from './services/utility.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [UtilityService],
   bootstrap: [AppComponent]

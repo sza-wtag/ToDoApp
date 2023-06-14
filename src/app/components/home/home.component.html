@@ -13,18 +13,18 @@
     <div class="task-cards-container" >
         <div class="add-task-card task-card" *ngIf="show">
             <textarea class="task_name_input" rows="5" cols="33" [(ngModel)]="task_name"></textarea> 
-            <div>
+            <div class="task-card-buttons">
                 <button (click)="onAddTask()" class="add-task-button">Add Task</button>
-                <button (click)="hideAddTaskCard()" class="delete-task-button"><img alt={{img_text}} src="../../../assets/icons/delete.svg"></button>
+                <button (click)="hideAddTaskCard()" class="task-card-button"><fa-icon class="icon-style" [icon]="faDelete"></fa-icon> </button>
             </div>
         </div>
         <div class="task-card" *ngFor="let task of tasks; let i=index">
             <h2 class="task-name">{{task.name}}</h2>
             <p class="task-time">{{task.createDate}}</p>
             <div class="task-card-buttons">
-                <button><img alt={{img_text}} src="../../../assets/icons/done.svg"></button>
-                <button><img alt={{img_text}} src="../../../assets/icons/edit.svg"></button>
-                <button><img alt={{img_text}} src="../../../assets/icons/delete.svg"></button>
+                <button class="task-card-button"><fa-icon class="icon-style" [icon]="faDone"></fa-icon> </button>
+                <button class="task-card-button"><fa-icon class="icon-style" [icon]="faEdit"></fa-icon> </button>
+                <button class="task-card-button"><fa-icon class="icon-style" [icon]="faDelete"></fa-icon> </button>
             </div>
         </div>
     </div>
