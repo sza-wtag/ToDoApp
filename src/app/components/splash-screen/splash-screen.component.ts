@@ -12,6 +12,7 @@ export class SplashScreenComponent implements OnInit , OnDestroy {
   show_splash:boolean;
   img_text: string;
   timeOutIDs:number[] = [];
+  imageUrl = "../../../assets/icons";
 
   constructor(private _utilityService: UtilityService){}
 
