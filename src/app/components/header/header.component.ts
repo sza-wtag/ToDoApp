@@ -6,12 +6,13 @@ import { UtilityService } from 'src/app/services/utility.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent implements OnInit {
   imgText = ''
   imageUrl = "../../../assets/icons"
 
   constructor(private _utilityService: UtilityService){}
-  
+
     ngOnInit(){
       this.imgText = this._utilityService.IMG_TEXT
   }

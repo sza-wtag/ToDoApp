@@ -10,6 +10,7 @@ describe('SplashScreenComponent', () => {
     TestBed.configureTestingModule({
       declarations: [SplashScreenComponent]
     });
+    
     fixture = TestBed.createComponent(SplashScreenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

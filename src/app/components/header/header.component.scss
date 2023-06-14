@@ -42,12 +42,14 @@
         }
     }
  }
+
 // Medium devices 
 @media ( (min-width:768px) and (max-width: 1024px)) {
     .header {
         @include headerStyle($sp-72, $sp-70, $sp-70);
     }
  }
+ 
 // Large devices 
 @media (min-width: 1024px) { 
     .header {

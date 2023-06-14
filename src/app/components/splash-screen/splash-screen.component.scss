@@ -53,6 +53,7 @@
 // Large devices 
 @media (min-width: 1024px) { 
     .app-splash-screen {
+        
         &-label {
             @include appLabelStyle(700, $sp-96);
             height: $sp-112; 
