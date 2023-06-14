@@ -10,6 +10,7 @@ import { HomeTopComponent} from './components/home/home-top/home-top.component';
 import { FormsModule } from '@angular/forms';
 import { UtilityService } from './services/utility.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TaskContainerComponent } from './components/home/task-container/task-container.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SplashScreenComponent,
     HeaderComponent,
     HomeComponent,
-    HomeTopComponent
+    HomeTopComponent,
+    TaskContainerComponent
   ],
   imports: [
     BrowserModule,

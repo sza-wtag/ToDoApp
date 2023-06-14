@@ -1,23 +1,6 @@
 <div class="home-container">
     <app-home-top (showEvent)="showAddTaskCard()"></app-home-top>
-    <div class="task-cards-container" >
-        <div class="add-task-card task-card" *ngIf="show">
-            <textarea class="task_name_input" rows="5" cols="33" [(ngModel)]="taskName"></textarea> 
-            <div class="task-card-buttons">
-                <button (click)="onAddTask()" class="add-task-button">Add Task</button>
-                <button (click)="hideAddTaskCard()" class="task-card-button"><fa-icon class="icon-style" [icon]="faDelete"></fa-icon> </button>
-            </div>
-        </div>
-        <div class="task-card" *ngFor="let task of tasks; let i=index">
-            <h2 class="task-name">{{task.name}}</h2>
-            <p class="task-time">{{task.createDate}}</p>
-            <div class="task-card-buttons">
-                <button class="task-card-button"><fa-icon class="icon-style" [icon]="faDone"></fa-icon> </button>
-                <button class="task-card-button"><fa-icon class="icon-style" [icon]="faEdit"></fa-icon> </button>
-                <button class="task-card-button"><fa-icon class="icon-style" [icon]="faDelete"></fa-icon> </button>
-            </div>
-        </div>
-    </div>
+    <app-task-container ></app-task-container>
     <div class="add-one-task-icon" *ngIf="tasks.length <= 0 && !show">
         <button (click)="showAddTaskCard()"><img  alt={{imgText}} src="../../../assets/icons/addOne.svg"></button>
     </div>
