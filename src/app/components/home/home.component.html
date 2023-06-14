@@ -3,7 +3,7 @@
         <h1 class="add-task-label">Add Task</h1>
         <div class="home-top-buttons">
             <div class="create-button">
-                <button (click)="showAddTaskCard()">＋ Create</button>
+                <button (click)="showAddTaskCard()"><fa-icon [icon]="faPlus"></fa-icon> Create</button>
             </div>
             <div class="filter-buttons">
 
@@ -12,15 +12,15 @@
     </div>
     <div class="task-cards-container" >
         <div class="add-task-card task-card" *ngIf="show">
-            <textarea id="task_name_input" rows="5" cols="33" [(ngModel)]="task_name"></textarea> 
-            <div class="task-card-buttons">
-                <button type="submit" (click) ="onAddTask()" id="add-task-button">Add Task</button>
-                <button (click)="hideAddTaskCard()"><img alt={{img_text}} src="../../../assets/icons/delete.svg"></button>
+            <textarea class="task_name_input" rows="5" cols="33" [(ngModel)]="task_name"></textarea> 
+            <div>
+                <button (click)="onAddTask()" class="add-task-button">Add Task</button>
+                <button (click)="hideAddTaskCard()" class="delete-task-button"><img alt={{img_text}} src="../../../assets/icons/delete.svg"></button>
             </div>
         </div>
         <div class="task-card" *ngFor="let task of tasks; let i=index">
-            <h2 id="task-name">{{task.name}}</h2>
-            <p id="task-time">{{task.createDate}}</p>
+            <h2 class="task-name">{{task.name}}</h2>
+            <p class="task-time">{{task.createDate}}</p>
             <div class="task-card-buttons">
                 <button><img alt={{img_text}} src="../../../assets/icons/done.svg"></button>
                 <button><img alt={{img_text}} src="../../../assets/icons/edit.svg"></button>
@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div id="add-one-task-icon" *ngIf="tasks.length <= 0 && !show">
+    <div class="add-one-task-icon" *ngIf="tasks.length <= 0 && !show">
         <button (click)="showAddTaskCard()"><img  alt={{img_text}} src="../../../assets/icons/addOne.svg"></button>
     </div>
 </div>

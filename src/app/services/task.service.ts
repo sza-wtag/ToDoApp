@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Task } from '../models/task.model';
+import { ITask } from '../models/task.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
 
-  tasksArray : Task[] = [];
-  addTask (task: Task){
+  tasksArray : ITask[] = [];
+  addTask (task: ITask){
     this.tasksArray.unshift(task)
   }
 
