@@ -18,7 +18,7 @@ export class SplashScreenComponent implements OnInit , OnDestroy {
 
   ngOnInit() {
     this.timeOutIDs.push(
-      window.setTimeout (() => this.windowWidth ='-' + window.innerWidth + 'px',2000)
+      window.setTimeout (() => this.windowWidth = `-${window.innerWidth}px`,2000)
     );
    
     this.imgText = this._utilityService.IMG_TEXT;
