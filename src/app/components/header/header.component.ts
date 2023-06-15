@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UtilityService } from 'src/app/services/utility.service';
+import { IMAGE_TEXT } from 'src/constants/constant';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +15,6 @@ export class HeaderComponent implements OnInit {
   constructor(private _utilityService: UtilityService){}
 
     ngOnInit(){
-      this.imgText = this._utilityService.IMG_TEXT
+      this.imgText = IMAGE_TEXT 
   }
 }

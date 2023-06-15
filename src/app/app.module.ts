@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SplashScreenComponent } from './components/splash-screen/splash-screen.component';
@@ -20,4 +19,4 @@ import { UtilityService } from './services/utility.service';
   providers: [UtilityService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

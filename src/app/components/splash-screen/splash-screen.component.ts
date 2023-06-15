@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy , ViewEncapsulation } from '@angular/core';
 import { UtilityService } from 'src/app/services/utility.service';
-
+import {IMAGE_TEXT} from "src/constants/constant";
 @Component({
   selector: 'app-splash-screen',
   templateUrl: './splash-screen.component.html',
@@ -21,7 +21,7 @@ export class SplashScreenComponent implements OnInit , OnDestroy {
       window.setTimeout (() => this.windowWidth = `-${window.innerWidth}px`,2000)
     );
    
-    this.imgText = this._utilityService.IMG_TEXT;
+    this.imgText = IMAGE_TEXT;
     this.showSplash = this._utilityService.SHOW_SPLASH;
   }
  
