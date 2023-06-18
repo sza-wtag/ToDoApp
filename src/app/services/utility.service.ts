@@ -4,5 +4,5 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UtilityService {
-  SHOW_SPLASH = true;
+  showSplash = true;
 }

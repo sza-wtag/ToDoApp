@@ -1,1 +1,1 @@
-export const  IMAGE_TEXT = 'MY ICON IMAGE';
+export const  DEFAULT_IMAGE_TEXT = 'Icon image';
