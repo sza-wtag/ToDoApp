@@ -17,12 +17,12 @@ export class SplashScreenComponent implements OnInit , OnDestroy {
   constructor(private _utilityService: UtilityService){}
 
   ngOnInit() {
-    this.timeOutIDs.push(
-      window.setTimeout (() => this.windowWidth = `-${window.innerWidth}px`,2000)
-    );
-   
     this.imgText = IMAGE_TEXT;
     this.showSplash = this._utilityService.SHOW_SPLASH;
+    
+    this.timeOutIDs.push(
+      window.setTimeout (() => this.showSplash = false,2000)
+    );
   }
  
   ngOnDestroy() {

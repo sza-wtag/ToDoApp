@@ -7,7 +7,6 @@
     @include displayAlign(flex, center, center);
     @include dimension(100%, 100%);
     z-index: 100;
-    transition: left 0.5s;
 
     &-inner {
         display: flex;  
