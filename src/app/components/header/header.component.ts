@@ -12,9 +12,9 @@ export class HeaderComponent implements OnInit {
   imgText = ''
   imageUrl = "../../../assets/icons"
 
-  constructor(private _utilityService: UtilityService){}
+  constructor(private _utilityService: UtilityService) {}
 
-    ngOnInit(){
+    ngOnInit() {
       this.imgText = IMAGE_TEXT 
   }
 }

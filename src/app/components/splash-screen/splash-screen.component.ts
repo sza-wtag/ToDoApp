@@ -14,7 +14,7 @@ export class SplashScreenComponent implements OnInit , OnDestroy {
   timeOutIDs: number[] = [];
   imageUrl = "../../../assets/icons";
 
-  constructor(private _utilityService: UtilityService){}
+  constructor(private _utilityService: UtilityService) {}
 
   ngOnInit() {
     this.imgText = IMAGE_TEXT;
