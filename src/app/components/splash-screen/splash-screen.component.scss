@@ -7,44 +7,58 @@
     @include displayAlign(flex, center, center);
     @include dimension(100%, 100%);
     z-index: 100;
-    transition: left 0.5s;
+
+    &-inner {
+        display: flex;  
+        align-items: center; 
+    }
+
+    &-label {
+        @include appLabelStyle(700, $sp-48*2);
+        height: $sp-20*5;
+    }
+
+    &-logo img {
+        @include dimension($sp-48*3, $sp-48*3);
+    }
 }
-.app-splash-screen-inner {
-    display: flex;  
-    align-items: center; 
-}
-.app-label {
-    @include appLabelStyle(700, $sp-96);
-    height: $sp-112;
-}
-.app-logo img {
-    @include dimension($sp-153, $sp-153);
-}
+
 // Small devices 
 @media (max-width: 768px) {  
-    .app-label {
-        @include appLabelStyle(300, $sp-56);
-    }
-    .app-logo img {
-        @include dimension($sp-103, $sp-103);
+    .app-splash-screen {
+        &-label {
+            @include appLabelStyle(300, $sp-8*7);
+        }
+
+        &-logo img {
+            @include dimension($sp-20*5, $sp-20*5);
+        }
     }
  }
+
 // Medium devices 
 @media ( (min-width:768px) and (max-width: 1024px)) {
-    .app-label {
-        @include appLabelStyle(500, $sp-76);
-    }
-    .app-logo img {
-        @include dimension($sp-123, $sp-123);
+    .app-splash-screen {
+        &-label {
+            @include appLabelStyle(500, $sp-36*2);
+        }
+
+        &-logo img {
+            @include dimension($sp-20*6, $sp-20*6);
+        }
     }
  }
+
 // Large devices 
 @media (min-width: 1024px) { 
-    .app-label {
-        @include appLabelStyle(700, $sp-96);
-        height: $sp-112; 
-    }
-    .app-logo img {
-        @include dimension($sp-153, $sp-153);
+    .app-splash-screen {
+        &-label {
+            @include appLabelStyle(700, $sp-48*2);
+            height: $sp-20*5; 
+        }
+
+        &-logo img {
+            @include dimension($sp-20*5, $sp-20*5);
+        }
     }
  }

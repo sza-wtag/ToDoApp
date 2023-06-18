@@ -4,8 +4,5 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UtilityService {
-
-  // constructor() {}
-  IMG_TEXT = "Image icon";
-  SHOW_SPLASH = false;
+  SHOW_SPLASH = true;
 }

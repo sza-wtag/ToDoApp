@@ -6,11 +6,13 @@
     padding-right: $paddinRight;
     
 }
+
 @mixin headerLabelStyle($fontSize, $paddingLeft) {
     font-size: $fontSize;
     color: $blue;
     padding-left: $paddingLeft;
 }
+
 @mixin backgroundPosition($color, $position, $val) {
     background-color: $color;
     position: $position;
@@ -25,12 +27,14 @@
     align-items: $align;
     justify-content: $justify;
 }
+
 @mixin appLabelStyle($fWeight, $fSize){
     color: $blue;
     font-weight: $fWeight;
     font-size: $fSize;
     text-align: center;
 }
+
 @mixin dimension($height, $width){
     height: $height;
     width: $width;
