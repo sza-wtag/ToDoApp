@@ -3,26 +3,30 @@
 @import "src/styles/_mixins.scss";
 
 .home-top {
-    margin-bottom: $sp-14;
+    margin-bottom: $sp-12;
+
+    &-label {
+        font-size: $sp-4*7;
+    }
+
+    &-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-filter-buttons button {
+        @include buttonCard($sp-12);
+        width: fit-content;
+        margin-right: $sp-8;
+    }
+
+    &-create-button {
+        color:$white;
+        @include buttonCard($sp-12);
+        background-color:$blue;
+    }
 }
 
-.home-top-buttons{
-    display: flex;
-    justify-content: space-between;
-}
 
-.filter-buttons button {
-    @include buttonCard($sp-14);
-    width: fit-content;
-    margin-right: $sp-8;
-}
 
-.add-task-label {
-    font-size: $sp-30;
-}
 
-.create-button button {
-    color:$white;
-    @include buttonCard($sp-14);
-    background-color:$blue;
-}
