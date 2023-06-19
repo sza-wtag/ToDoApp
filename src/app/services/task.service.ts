@@ -4,15 +4,15 @@ import { ITask } from '../models/task.model';
 @Injectable({
   providedIn: 'root'
 })
-export class TaskService {
 
-  private tasksArray : ITask[] = [];
-  addTask (task: ITask){
+export class TaskService {
+  tasksArray : ITask[] = [];
+  
+  addTask(task: ITask) {
     this.tasksArray.unshift(task)
   }
 
-  getTasks(){
+  getTasks() {
     return this.tasksArray
   }
-
 }

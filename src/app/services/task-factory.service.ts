@@ -5,16 +5,15 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class TaskFactoryService {
 
+export class TaskFactoryService {
   task = {} as ITask;
   private static currentId = 0;
 
-  createTask(task_name: string) {
-    
+  createTask(taskName: string) {
       return this.task = {
       id: TaskFactoryService.currentId++,
-      name: task_name,
+      name: taskName,
       status: false,
       createDate: formatDate (new Date(), 'dd.MM.YY', 'en')
     } 
