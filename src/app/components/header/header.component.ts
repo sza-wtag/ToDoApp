@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { UtilityService } from 'src/app/services/utility.service';
-import { IMAGE_TEXT } from 'src/constants/constant';
+import { Component } from '@angular/core';
+import { DEFAULT_IMAGE_TEXT } from 'src/constants/constant';
 
 @Component({
   selector: 'app-header',
@@ -8,13 +7,8 @@ import { IMAGE_TEXT } from 'src/constants/constant';
   styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent implements OnInit {
-  imgText = ''
-  imageUrl = "../../../assets/icons"
-
-  constructor(private _utilityService: UtilityService){}
-
-    ngOnInit(){
-      this.imgText = IMAGE_TEXT 
-  }
+export class HeaderComponent {
+  imgText = DEFAULT_IMAGE_TEXT;
+  logoIconUrl = "../../../assets/icons/logo.svg";
+  searchIconUrl = "../../../assets/icons/searchIcon.svg";
 }
