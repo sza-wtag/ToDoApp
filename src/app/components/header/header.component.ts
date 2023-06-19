@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { UtilityService } from 'src/app/services/utility.service';
+import { Component } from '@angular/core';
 import { DEFAULT_IMAGE_TEXT } from 'src/constants/constant';
 
 @Component({
@@ -8,14 +7,8 @@ import { DEFAULT_IMAGE_TEXT } from 'src/constants/constant';
   styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent implements OnInit {
-  imgText : string;
+export class HeaderComponent {
+  imgText = DEFAULT_IMAGE_TEXT;
   logoIconUrl = "../../../assets/icons/logo.svg";
   searchIconUrl = "../../../assets/icons/searchIcon.svg";
-
-  constructor(private _utilityService: UtilityService) {}
-
-    ngOnInit() {
-      this.imgText = DEFAULT_IMAGE_TEXT;
-  }
 }

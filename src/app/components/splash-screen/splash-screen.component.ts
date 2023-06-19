@@ -10,16 +10,14 @@ import {DEFAULT_IMAGE_TEXT} from "src/constants/constant";
 })
 export class SplashScreenComponent implements OnInit , OnDestroy {
   showSplash: boolean;
-  imgText: string;
+  imgText= DEFAULT_IMAGE_TEXT;
   timeOutID: number;
   iconImageUrl = "../../../assets/icons/logo.svg";
 
   constructor(private _utilityService: UtilityService) {}
 
   ngOnInit() {
-    this.imgText = DEFAULT_IMAGE_TEXT;
     this.showSplash = this._utilityService.showSplash;
-    
     this.timeOutID =   window.setTimeout(() => {
       this.showSplash = false
     }, 2000);
