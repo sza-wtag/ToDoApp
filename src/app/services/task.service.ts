@@ -6,8 +6,8 @@ import { ITask } from '../models/task.model';
 })
 
 export class TaskService {
-  tasksArray : ITask[] = [];
-  
+  private tasksArray : ITask[] = [];
+
   addTask(task: ITask) {
     this.tasksArray.unshift(task)
   }
