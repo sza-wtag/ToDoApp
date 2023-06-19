@@ -3,14 +3,8 @@
 @import "src/styles/_mixins.scss";
 
 .home-container {
-    margin: $sp-137 $sp-150 0 $sp-150;
+    margin: $sp-20*7 $sp-36*4 0 $sp-36*4;
     padding: 0;
-}
-
-.task-cards-container { 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* you can change 1fr to whatever you want, 200px for example*/
-    gap: 2rem;
 }
 
 .add-one-task-icon {
@@ -19,46 +13,6 @@
 }
 
 .add-one-task-icon button{
-   background-color: #F8F9FF;
+   background-color: $bodyGrey;
    border: none;
-}
-
-.task-card {
-    @include buttonCard($sp-14);
-}
-
-.task-name {
-    margin-top: 0;
-    color: #32394B;
-}
-
-.task-time {
-    font-size: 14px;
-    line-height: 16px;
-    color: $secondaryTextGrey;
-}
-
-.task_name_input {
-    @include buttonCard($sp-5);
-    border: $sp-3 solid $borderGrey;
-}
-
-.add-task-button {
-    @include buttonCard($sp-14);
-    width: fit-content;
-}
-
-.task-card-buttons {
-    display: flex;
-}
-
-.task-card-button {
-    background-color: $white;
-    border: none;   
-}
-
-.icon-style {
-    margin-right: 26px!important;
-    font-size: 24px;
-    color: $secondaryTextGrey;
 }
