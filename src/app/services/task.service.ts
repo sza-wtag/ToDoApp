@@ -12,6 +12,14 @@ export class TaskService {
     this.tasksArray.unshift(task)
   }
 
+  deleteTask(deleteTaskId: number){
+    const indexOfTask = this.tasksArray.findIndex(object => {
+      return object.id === deleteTaskId;
+    });
+    
+    this.tasksArray.splice(indexOfTask,1)
+  }
+
   getTasks() {
     return this.tasksArray
   }

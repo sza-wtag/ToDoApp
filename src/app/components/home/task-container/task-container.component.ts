@@ -30,6 +30,11 @@ export class TaskContainerComponent implements OnInit {
     this._utilityService.showAddTask = false;
   }
 
+  onDeleteTask(deleteTaskId: number){
+    this._taskService.deleteTask(deleteTaskId);
+    console.log("delete")
+  }
+
   hideAddTaskCard() { 
     this._utilityService.showAddTask = false;
     this.taskName = "";
