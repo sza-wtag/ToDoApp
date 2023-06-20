@@ -16,29 +16,8 @@ export class TaskContainerComponent implements OnInit {
   faDone = faCheck;
   faEdit = faPen;
   tasks : Task[] = [];
-  taskName : string;
   
   constructor(private _taskService: TaskService, private _taskFactoryService: TaskFactoryService, public _utilityService: UtilityService){}
-
-  onAddTask() {
-    this.taskName = this.taskName.replace(/^\s+|\s+$/gm, '').trim();
-    if(this.taskName) {
-      this._taskService.addTask(this._taskFactoryService.createTask(this.taskName));
-    }
-
-    this.taskName = "";
-    this._utilityService.showAddTask = false;
-  }
-
-  onDeleteTask(deleteTaskId: number){
-    this._taskService.deleteTask(deleteTaskId);
-    console.log("delete")
-  }
-
-  hideAddTaskCard() { 
-    this._utilityService.showAddTask = false;
-    this.taskName = "";
-  }
 
   ngOnInit(): void {
     this.tasks = this._taskService.getTasks();
