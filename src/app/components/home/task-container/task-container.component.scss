@@ -8,25 +8,6 @@
     gap: $sp-2 ;
 }
 
-.add-task-card{
-    &-name {
-        @include buttonCard($sp-4);
-        border: $sp-4 solid $borderGrey;
-    }
-
-    &-buttons {
-        &-add {
-            @include buttonCard($sp-12);
-            width: fit-content;
-        }
-
-        &-delete {
-            background-color: $white;
-            border: none;
-        }
-    }
-}
-
 .task-card {
     @include buttonCard($sp-12);
 
@@ -51,7 +32,5 @@
 }
 
 .icon-style{
-    margin-right: 26px!important;
-    font-size: 24px;
-    color: $secondaryTextGrey;
+   @include iconStyle();
 }

@@ -44,3 +44,9 @@
     border: $sp-2 solid $borderGrey;
     border-radius: $sp-4;
 }
+
+@mixin iconStyle() {
+    margin-right: $sp-24!important;
+    font-size: $sp-24;
+    color: $secondaryTextGrey;
+}
