@@ -21,7 +21,6 @@ export class TaskContainerComponent implements OnInit {
 
   onDeleteTask(deleteTaskId: number){
     this._taskService.deleteTask(deleteTaskId);
-    console.log("delete")
   }
 
   ngOnInit(): void {

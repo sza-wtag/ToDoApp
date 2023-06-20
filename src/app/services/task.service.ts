@@ -9,18 +9,18 @@ export class TaskService {
   private tasksArray : Task[] = [];
 
   addTask(task: Task) {
-    this.tasksArray.unshift(task)
+    this.tasksArray.unshift(task);
   }
 
   deleteTask(deleteTaskId: number){
-    const indexOfTask = this.tasksArray.findIndex(object => {
-      return object.id === deleteTaskId;
+    const indexOfTask = this.tasksArray.findIndex(task => {
+      return task.id === deleteTaskId;
     });
     
-    this.tasksArray.splice(indexOfTask,1)
+    this.tasksArray.splice(indexOfTask,1);
   }
 
   getTasks() {
-    return this.tasksArray
+    return this.tasksArray;
   }
 }
