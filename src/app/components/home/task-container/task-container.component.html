@@ -6,7 +6,7 @@
         <div class="task-card-buttons">
             <button class="task-card-button"><fa-icon class="icon-style" [icon]="faDone"></fa-icon> </button>
             <button class="task-card-button"><fa-icon class="icon-style" [icon]="faEdit"></fa-icon> </button>
-            <button class="task-card-button"><fa-icon class="icon-style" [icon]="faDelete"></fa-icon> </button>
+            <button (click)="onDeleteTask(task.id)" class="task-card-button"><fa-icon class="icon-style" [icon]="faDelete"></fa-icon> </button>
         </div>
     </div>
 </div>
