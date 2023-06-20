@@ -15,19 +15,35 @@
         margin-top: 0;
         color: #32394B;
     }
+    
+    &-name-done {
+        margin-top: 0;
+        color: $green;
+    }
 
     &-time {
         font-size: 14px;
         color: $secondaryTextGrey;
     }
 
-    &-buttons {
+    &-bottom {
         display: flex;
-    }
+        justify-content: space-between;
 
-    &-button {
-        background-color: $white;
-        border: none;   
+        &-buttons {
+            display: flex;
+        }
+
+        &-button {
+            background-color: $white;
+            border: none;   
+        }
+
+        &-complete {
+            color:$white;
+            @include buttonCard($sp-8);
+            background-color:$blue;   
+        }
     }
 }
 

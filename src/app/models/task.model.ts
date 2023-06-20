@@ -3,4 +3,5 @@ export interface Task {
     name: string;
     status: boolean;
     createDate: string;
+    daysToComplete :string;
 }

@@ -13,7 +13,10 @@ export class AddTaskComponent {
   faDelete = faTrash;
   taskName : string;
 
-  constructor(private _taskService: TaskService, private _taskFactoryService: TaskFactoryService, public _utilityService: UtilityService){}
+  constructor( 
+    private _taskService: TaskService,
+    private _taskFactoryService: TaskFactoryService,
+    public _utilityService: UtilityService){}
 
   onAddTask() {
     this.taskName = this.taskName.replace(/^\s+|\s+$/gm, '').trim();
