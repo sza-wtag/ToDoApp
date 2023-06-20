@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { TaskFactoryService } from 'src/app/services/task-factory.service';
 import { TaskService } from 'src/app/services/task.service';
 import { UtilityService } from 'src/app/services/utility.service';
-import { faTrash, faCheck, faPen } from '@fortawesome/free-solid-svg-icons';
-import { Task } from 'src/app/models/task.model';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-add-task',
@@ -13,9 +12,6 @@ import { Task } from 'src/app/models/task.model';
 export class AddTaskComponent {
 
   faDelete = faTrash;
-  faDone = faCheck;
-  faEdit = faPen;
-  tasks : Task[] = [];
   taskName : string;
 
   constructor(private _taskService: TaskService, private _taskFactoryService: TaskFactoryService, public _utilityService: UtilityService){}
