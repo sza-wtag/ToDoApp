@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { UtilityService } from './services/utility.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TaskContainerComponent } from './components/home/task-container/task-container.component';
+import { AddTaskComponent } from './components/home/task-container/add-task/add-task.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TaskContainerComponent } from './components/home/task-container/task-co
     HeaderComponent,
     HomeComponent,
     HomeTopComponent,
-    TaskContainerComponent
+    TaskContainerComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
