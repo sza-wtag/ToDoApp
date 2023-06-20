@@ -1,0 +1,57 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_colors.scss";
+@import "src/styles/_mixins.scss";
+
+.tasks-container { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $sp-2 ;
+}
+
+.add-task-card{
+    &-name {
+        @include buttonCard($sp-4);
+        border: $sp-4 solid $borderGrey;
+    }
+
+    &-buttons {
+        &-add {
+            @include buttonCard($sp-12);
+            width: fit-content;
+        }
+
+        &-delete {
+            background-color: $white;
+            border: none;
+        }
+    }
+}
+
+.task-card {
+    @include buttonCard($sp-12);
+
+    &-name {
+        margin-top: 0;
+        color: #32394B;
+    }
+
+    &-time {
+        font-size: 14px;
+        color: $secondaryTextGrey;
+    }
+
+    &-buttons {
+        display: flex;
+    }
+
+    &-button {
+        background-color: $white;
+        border: none;   
+    }
+}
+
+.icon-style{
+    margin-right: 26px!important;
+    font-size: 24px;
+    color: $secondaryTextGrey;
+}

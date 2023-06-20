@@ -1,20 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Task } from '../models/task.model';
+import { ITask } from '../models/task.model';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class TaskService {
-  
-  tasksArray : Task[] = [];
-  addTask (task: Task){
+  private tasksArray : ITask[] = [];
+
+  addTask(task: ITask) {
     this.tasksArray.unshift(task)
   }
-  deleteTask (deleteTaskId: number){
-    this.tasksArray.splice(deleteTaskId,1);
-  }
-  getTasks(){
+
+  getTasks() {
     return this.tasksArray
   }
-
 }

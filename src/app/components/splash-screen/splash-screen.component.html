@@ -1,7 +1,6 @@
-<div class="app-splash-screen"
-[ngStyle] ="{'left': windowWidth}" >
+<div class="app-splash-screen" *ngIf="showSplash" >
     <div class="app-splash-screen-inner">
-        <div class="app-logo"><img alt={{img_text}} src="../../../assets/icons/logo.svg"></div>
-        <div class="app-label">Todos</div>
+        <div class="app-splash-screen-logo"><img [alt]="imgText" [src]="iconImageUrl"></div>
+        <div class="app-splash-screen-label">Todos</div>
     </div>
 </div>

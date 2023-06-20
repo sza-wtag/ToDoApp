@@ -1,0 +1,18 @@
+<div class="tasks-container" >
+    <div class="add-task-card task-card" *ngIf="_utilityService.showAddTask">
+        <textarea class="add-task-card-name" rows="5" cols="33" [(ngModel)]="taskName"></textarea> 
+        <div class="add-task-card-buttons">
+            <button (click)="onAddTask()" class="add-task-card-buttons-add">Add Task</button>
+            <button (click)="hideAddTaskCard()" class="add-task-card-buttons-delete"><fa-icon class="icon-style" [icon]="faDelete"></fa-icon> </button>
+        </div>
+    </div>
+    <div class="task-card" *ngFor="let task of tasks; let i=index">
+        <h2 class="task-card-name">{{task.name}}</h2>
+        <p class="task-card-time">{{task.createDate}}</p>
+        <div class="task-card-buttons">
+            <button class="task-card-button"><fa-icon class="icon-style" [icon]="faDone"></fa-icon> </button>
+            <button class="task-card-button"><fa-icon class="icon-style" [icon]="faEdit"></fa-icon> </button>
+            <button class="task-card-button"><fa-icon class="icon-style" [icon]="faDelete"></fa-icon> </button>
+        </div>
+    </div>
+</div>
