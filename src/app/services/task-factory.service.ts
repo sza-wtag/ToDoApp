@@ -1,5 +1,5 @@
 import { formatDate } from '@angular/common';
-import { ITask } from './../models/task.model';
+import { Task } from './../models/task.model';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 
 export class TaskFactoryService {
-  task = {} as ITask;
+  task = {} as Task;
   private static currentId = 0;
 
   createTask(taskName: string) {
