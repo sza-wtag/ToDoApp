@@ -13,12 +13,12 @@ export class TaskService {
     this.tasksArray.unshift(task);
   }
 
-  deleteTask(deleteTaskId: number){
+  deleteTask(deleteTaskId: number) {
     const indexOfTask = this.getTaskIndex(deleteTaskId);
     this.tasksArray.splice(indexOfTask,1);
   }
 
-  updateTaskStatus(completedTaskId: number){
+  updateTaskStatus(completedTaskId: number) {
     const indexOfTask = this.getTaskIndex(completedTaskId);
     const daysToComplete = this.getDaysToComplete(indexOfTask)
     this.tasksArray[indexOfTask].status = true;
@@ -29,14 +29,14 @@ export class TaskService {
     return this.tasksArray;
   }
 
-  getTaskIndex(id: number){
+  getTaskIndex(id: number) {
     const index = this.tasksArray.findIndex(task => {
       return task.id === id;
     });
     return index;
   }
 
-  getDaysToComplete(index: number){
+  getDaysToComplete(index: number) {
     const doneDate = formatDate (new Date(), 'dd.MM.YY', 'en')
     const createDate = this.tasksArray[index].createDate
     const diffTime = Math.abs(parseFloat(doneDate)  - parseFloat(createDate));
