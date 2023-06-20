@@ -10,12 +10,10 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./add-task.component.scss']
 })
 export class AddTaskComponent {
-
   faDelete = faTrash;
   taskName : string;
 
   constructor(private _taskService: TaskService, private _taskFactoryService: TaskFactoryService, public _utilityService: UtilityService){}
-
 
   onAddTask() {
     this.taskName = this.taskName.replace(/^\s+|\s+$/gm, '').trim();
@@ -31,5 +29,4 @@ export class AddTaskComponent {
     this._utilityService.showAddTask = false;
     this.taskName = "";
   }
-
 }
