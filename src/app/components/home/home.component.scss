@@ -2,9 +2,13 @@
 @import "src/styles/_colors.scss";
 @import "src/styles/_mixins.scss";
 
-.home-container {
-    margin: $sp-20*7 $sp-36*4 0 $sp-36*4;
-    padding: 0;
+.home{
+    background-color: $bodyGrey;
+
+    &-container {
+        margin: $sp-20*7 $sp-36*4 0 $sp-36*4;
+        padding: 0;
+    }
 }
 
 .add-one-task-icon {
