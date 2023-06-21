@@ -2,7 +2,7 @@
 @import "src/styles/_colors.scss";
 @import "src/styles/_mixins.scss";
 
-.edit-task-card{
+.edit-task-card {
     &-name {
         @include buttonCard($sp-4);
         border: $sp-4 solid $borderGrey;
@@ -26,6 +26,6 @@
     }
 }
 
-.icon-style{
+.icon-style {
     @include iconStyle();
 }

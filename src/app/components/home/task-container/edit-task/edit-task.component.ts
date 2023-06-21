@@ -33,7 +33,7 @@ export class EditTaskComponent implements OnInit {
     }
   }
 
-  onDelete(){
+  onDelete() {
     this._taskService.deleteEditedTask(this.geteditableTaskId);
   }
 

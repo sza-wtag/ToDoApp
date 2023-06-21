@@ -30,10 +30,9 @@ export class TaskService {
     this.editTask(editTaskid,newName);
   }
 
-  deleteEditedTask(deleteEditTaskId: number){
+  deleteEditedTask(deleteEditTaskId: number) {
     const indexOfTask = this.getTaskIndex(deleteEditTaskId);
     this.tasksArray[indexOfTask].editable = false;
-
   }
 
   updateTaskStatus(completedTaskId: number) {
@@ -43,7 +42,7 @@ export class TaskService {
     this.tasksArray[indexOfTask].daysToComplete = daysToComplete;
   }
 
-  updateTaskEditableStatus(editTaskId: number){
+  updateTaskEditableStatus(editTaskId: number) {
     const indexOfTask = this.getTaskIndex(editTaskId);
     this.tasksArray[indexOfTask].editable = true;
   }
@@ -51,7 +50,8 @@ export class TaskService {
   getTasks() {
     return this.tasksArray;
   }
-  getTaskById(id: number){
+
+  getTaskById(id: number) {
     const indexOfTask = this.getTaskIndex(id);
     return  this.tasksArray[indexOfTask]
   }

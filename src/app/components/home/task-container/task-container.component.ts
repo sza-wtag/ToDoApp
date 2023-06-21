@@ -19,15 +19,15 @@ export class TaskContainerComponent implements OnInit {
 
   constructor(private _taskService: TaskService, public _utilityService: UtilityService){}
 
-  onDeleteTask(deleteTaskId: number){
+  onDeleteTask(deleteTaskId: number) {
     this._taskService.deleteTask(deleteTaskId);
   }
 
-  onCompleteTask(completedTaskId: number){
+  onCompleteTask(completedTaskId: number) {
     this._taskService.updateTaskStatus(completedTaskId);
   }
 
-  onEditTask(editTaskId: number){
+  onEditTask(editTaskId: number) {
     this._taskService.updateTaskEditableStatus(editTaskId);
     this.editableTaskId = editTaskId;
   }
