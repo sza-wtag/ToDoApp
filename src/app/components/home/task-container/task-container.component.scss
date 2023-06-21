@@ -5,7 +5,7 @@
 .tasks-container { 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: $sp-2 ;
+    gap: $sp-36 ;
 }
 
 .task-card {
