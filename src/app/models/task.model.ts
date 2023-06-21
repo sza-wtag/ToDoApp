@@ -4,4 +4,5 @@ export interface Task {
     status: boolean;
     createDate: string;
     daysToComplete :string;
+    editable : boolean;
 }

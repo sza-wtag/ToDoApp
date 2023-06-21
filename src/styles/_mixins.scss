@@ -49,4 +49,7 @@
     margin-right: $sp-24!important;
     font-size: $sp-24;
     color: $secondaryTextGrey;
+    &:hover {
+        color: $blue; 
+    }
 }

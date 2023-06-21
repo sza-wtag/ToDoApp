@@ -18,6 +18,24 @@ export class TaskService {
     this.tasksArray.splice(indexOfTask,1);
   }
 
+  editTask(editTaskid: number, newName: string){
+    const indexOfTask = this.getTaskIndex(editTaskid);
+    this.tasksArray[indexOfTask].name = newName;
+    this.tasksArray[indexOfTask].editable = false;
+  }
+
+  editAndDoneTask(editTaskid: number, newName: string){
+    const indexOfTask = this.getTaskIndex(editTaskid);
+    this.tasksArray[indexOfTask].status = true;
+    this.editTask(editTaskid,newName);
+  }
+
+  deleteEditedTask(deleteEditTaskId: number){
+    const indexOfTask = this.getTaskIndex(deleteEditTaskId);
+    this.tasksArray[indexOfTask].editable = false;
+
+  }
+
   updateTaskStatus(completedTaskId: number) {
     const indexOfTask = this.getTaskIndex(completedTaskId);
     const daysToComplete = this.getDaysToComplete(indexOfTask)
@@ -25,8 +43,17 @@ export class TaskService {
     this.tasksArray[indexOfTask].daysToComplete = daysToComplete;
   }
 
+  updateTaskEditableStatus(editTaskId: number){
+    const indexOfTask = this.getTaskIndex(editTaskId);
+    this.tasksArray[indexOfTask].editable = true;
+  }
+
   getTasks() {
     return this.tasksArray;
+  }
+  getTaskById(id: number){
+    const indexOfTask = this.getTaskIndex(id);
+    return  this.tasksArray[indexOfTask]
   }
 
   getTaskIndex(id: number) {

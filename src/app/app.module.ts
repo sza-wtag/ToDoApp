@@ -11,6 +11,7 @@ import { UtilityService } from './services/utility.service';
 import { TaskContainerComponent } from './components/home/task-container/task-container.component';
 import { AddTaskComponent } from './components/home/task-container/add-task/add-task.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EditTaskComponent } from './components/home/task-container/edit-task/edit-task.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     HomeTopComponent,
     TaskContainerComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    EditTaskComponent
   ],
   imports: [
     BrowserModule,

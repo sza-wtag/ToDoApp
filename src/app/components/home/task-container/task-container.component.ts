@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { faTrash, faCheck, faPen } from '@fortawesome/free-solid-svg-icons';
 import { Task } from 'src/app/models/task.model';
-import { TaskFactoryService } from 'src/app/services/task-factory.service';
 import { TaskService } from 'src/app/services/task.service';
 import { UtilityService } from 'src/app/services/utility.service';
 
@@ -16,8 +15,9 @@ export class TaskContainerComponent implements OnInit {
   faDone = faCheck;
   faEdit = faPen;
   tasks : Task[] = [];
-  
-  constructor(private _taskService: TaskService, private _taskFactoryService: TaskFactoryService, public _utilityService: UtilityService){}
+  editableTaskId: number;
+
+  constructor(private _taskService: TaskService, public _utilityService: UtilityService){}
 
   onDeleteTask(deleteTaskId: number){
     this._taskService.deleteTask(deleteTaskId);
@@ -27,8 +27,12 @@ export class TaskContainerComponent implements OnInit {
     this._taskService.updateTaskStatus(completedTaskId);
   }
 
+  onEditTask(editTaskId: number){
+    this._taskService.updateTaskEditableStatus(editTaskId);
+    this.editableTaskId = editTaskId;
+  }
+
   ngOnInit(): void {
     this.tasks = this._taskService.getTasks();
   }
-
 }

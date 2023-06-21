@@ -1,16 +1,19 @@
 <div class="tasks-container" >
     <app-add-task *ngIf="_utilityService.showAddTask"></app-add-task>
     <div class="task-card" *ngFor="let task of tasks; let i=index">
-        <h2 *ngIf="!task.status" class="task-card-name">{{task.name}}</h2>
-        <s *ngIf="task.status" class="task-card-name-done"><h2 class="task-card-name-done">{{task.name}}</h2></s>
-        <p class="task-card-time">Created At: {{task.createDate}}</p>
-        <div class="task-card-bottom">
-            <div class="task-card-bottom-buttons">
-                <button *ngIf="!task.status" (click)="onCompleteTask(task.id)" class="task-card-bottom-button"><fa-icon class="icon-style" [icon]="faDone"></fa-icon> </button>
-                <button *ngIf="!task.status" class="task-card-bottom-button"><fa-icon class="icon-style" [icon]="faEdit"></fa-icon> </button>
-                <button (click)="onDeleteTask(task.id)" class="task-card-bottom-button"><fa-icon class="icon-style" [icon]="faDelete"></fa-icon> </button>
+        <div *ngIf="!task.editable">
+            <h2 *ngIf="!task.status" class="task-card-name">{{task.name}}</h2>
+            <s *ngIf="task.status" class="task-card-name-done"><h2 class="task-card-name-done">{{task.name}}</h2></s>
+            <p class="task-card-time">Created At: {{task.createDate}}</p>
+            <div class="task-card-bottom">
+                <div class="task-card-bottom-buttons">
+                    <button *ngIf="!task.status" (click)="onCompleteTask(task.id)" class="task-card-bottom-button"><fa-icon class="icon-style" [icon]="faDone"></fa-icon> </button>
+                    <button *ngIf="!task.status" (click)="onEditTask(task.id)" class="task-card-bottom-button"><fa-icon class="icon-style" [icon]="faEdit"></fa-icon> </button>
+                    <button (click)="onDeleteTask(task.id)" class="task-card-bottom-button"><fa-icon class="icon-style" [icon]="faDelete"></fa-icon> </button>
+                </div>
+                <button *ngIf="task.status" class="task-card-bottom-complete"><small>Completed in {{task.daysToComplete}} days</small></button>
             </div>
-            <button *ngIf="task.status" class="task-card-bottom-complete"><small>Completed in {{task.daysToComplete}} days</small></button>
         </div>
+        <app-edit-task *ngIf="task.editable" [geteditableTaskId]="editableTaskId"></app-edit-task>
     </div>
 </div>

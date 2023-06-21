@@ -17,6 +17,7 @@ export class TaskFactoryService {
       status: false,
       createDate: formatDate (new Date(), 'dd.MM.YY', 'en'),
       daysToComplete: "",
+      editable: false
     } 
   }
 }

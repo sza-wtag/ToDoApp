@@ -1,0 +1,8 @@
+<div class="edit-task-card">
+    <textarea class="edit-task-card-name" rows="5" cols="33" [(ngModel)]="editedTaskName"></textarea>
+    <div class="edit-task-card-buttons">
+        <button (click)="onSaveChange()" class="edit-task-card-buttons-save">Save</button>
+        <button (click)="onDone()" class="edit-task-card-buttons-button"><fa-icon class="icon-style" [icon]="faDone"></fa-icon> </button>
+        <button (click)="onDelete()"  class="edit-task-card-buttons-button"><fa-icon class="icon-style" [icon]="faDelete"></fa-icon> </button>
+    </div>
+</div>
