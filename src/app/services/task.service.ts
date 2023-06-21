@@ -26,8 +26,10 @@ export class TaskService {
 
   editAndDoneTask(editTaskid: number, newName: string){
     const indexOfTask = this.getTaskIndex(editTaskid);
+    const daysToComplete = this.getDaysToComplete(indexOfTask)
     this.tasksArray[indexOfTask].status = true;
     this.editTask(editTaskid,newName);
+    this.tasksArray[indexOfTask].daysToComplete = daysToComplete;
   }
 
   deleteEditedTask(deleteEditTaskId: number) {
