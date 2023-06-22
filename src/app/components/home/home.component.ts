@@ -10,7 +10,7 @@ import { DEFAULT_IMAGE_TEXT } from 'src/constants/constant';
 })
 
 export class HomeComponent {
-  imgText = DEFAULT_IMAGE_TEXT;
+  imgText: string = DEFAULT_IMAGE_TEXT;
   addOneIconUrl = "../../../assets/icons/addOne.svg";
   tasks = this._taskService.getTasks();
 
