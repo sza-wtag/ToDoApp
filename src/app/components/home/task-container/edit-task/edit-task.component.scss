@@ -2,7 +2,7 @@
 @import "src/styles/_colors.scss";
 @import "src/styles/_mixins.scss";
 
-.add-task-card{
+.edit-task-card {
     &-name {
         @include buttonCard($sp-4);
         border: $sp-4 solid $borderGrey;
@@ -10,7 +10,7 @@
     }
 
     &-buttons {
-        &-add {
+        &-save {
             @include buttonCard($sp-12);
             width: fit-content;
             &:hover {
@@ -19,17 +19,13 @@
             }
         }
 
-        &-delete {
+        &-button {
             background-color: $white;
             border: none;
         }
     }
 }
 
-.task-card {
-    @include buttonCard($sp-12);
-}
-
-.icon-style{
+.icon-style {
     @include iconStyle();
- }
+}
