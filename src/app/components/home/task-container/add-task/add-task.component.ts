@@ -10,7 +10,6 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./add-task.component.scss']
 })
 export class AddTaskComponent {
-
   faDelete = faTrash;
   taskName : string;
 
