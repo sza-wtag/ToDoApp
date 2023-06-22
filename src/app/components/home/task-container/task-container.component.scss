@@ -2,35 +2,35 @@
 @import "src/styles/_colors.scss";
 @import "src/styles/_mixins.scss";
 
-.tasks-container { 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: $sp-2 ;
+.tasks-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $sp-2;
 }
 
 .task-card {
-    @include buttonCard($sp-12);
+  @include buttonCard($sp-12);
 
-    &-name {
-        margin-top: 0;
-        color: #32394B;
-    }
+  &-name {
+    margin-top: 0;
+    color: #32394b;
+  }
 
-    &-time {
-        font-size: 14px;
-        color: $secondaryTextGrey;
-    }
+  &-time {
+    font-size: 14px;
+    color: $secondaryTextGrey;
+  }
 
-    &-buttons {
-        display: flex;
-    }
+  &-buttons {
+    display: flex;
+  }
 
-    &-button {
-        background-color: $white;
-        border: none;   
-    }
+  &-button {
+    background-color: $white;
+    border: none;
+  }
 }
 
-.icon-style{
-   @include iconStyle();
+.icon-style {
+  @include iconStyle();
 }

@@ -7,28 +7,32 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-add-task',
   templateUrl: './add-task.component.html',
-  styleUrls: ['./add-task.component.scss']
+  styleUrls: ['./add-task.component.scss'],
 })
 export class AddTaskComponent {
   faDelete = faTrash;
-  taskName : string;
+  taskName: string;
 
-  constructor(private _taskService: TaskService, private _taskFactoryService: TaskFactoryService, public _utilityService: UtilityService){}
-
+  constructor(
+    private _taskService: TaskService,
+    private _taskFactoryService: TaskFactoryService,
+    public _utilityService: UtilityService
+  ) {}
 
   onAddTask() {
     this.taskName = this.taskName.replace(/^\s+|\s+$/gm, '').trim();
-    if(this.taskName) {
-      this._taskService.addTask(this._taskFactoryService.createTask(this.taskName));
+    if (this.taskName) {
+      this._taskService.addTask(
+        this._taskFactoryService.createTask(this.taskName)
+      );
     }
 
-    this.taskName = "";
+    this.taskName = '';
     this._utilityService.showAddTask = false;
   }
 
-  hideAddTaskCard() { 
+  hideAddTaskCard() {
     this._utilityService.showAddTask = false;
-    this.taskName = "";
+    this.taskName = '';
   }
-
 }
