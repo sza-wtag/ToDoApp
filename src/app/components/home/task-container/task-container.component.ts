@@ -8,16 +8,19 @@ import { UtilityService } from 'src/app/services/utility.service';
 @Component({
   selector: 'app-task-container',
   templateUrl: './task-container.component.html',
-  styleUrls: ['./task-container.component.scss']
+  styleUrls: ['./task-container.component.scss'],
 })
-
 export class TaskContainerComponent implements OnInit {
   faDelete = faTrash;
   faDone = faCheck;
   faEdit = faPen;
-  tasks : Task[] = [];
-  
-  constructor(private _taskService: TaskService, private _taskFactoryService: TaskFactoryService, public _utilityService: UtilityService){}
+  tasks: Task[] = [];
+
+  constructor(
+    private _taskService: TaskService,
+    private _taskFactoryService: TaskFactoryService,
+    public _utilityService: UtilityService
+  ) {}
 
   onDeleteTask(deleteTaskId: number){
     this._taskService.deleteTask(deleteTaskId);
@@ -30,5 +33,4 @@ export class TaskContainerComponent implements OnInit {
   ngOnInit(): void {
     this.tasks = this._taskService.getTasks();
   }
-
 }

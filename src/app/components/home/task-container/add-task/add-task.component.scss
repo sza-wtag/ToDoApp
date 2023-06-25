@@ -2,30 +2,29 @@
 @import "src/styles/_colors.scss";
 @import "src/styles/_mixins.scss";
 
-.add-task-card{
-    &-name {
-        @include buttonCard($sp-4);
-        border: $sp-4 solid $borderGrey;
+.add-task-card {
+  &-name {
+    @include buttonCard($sp-4);
+    border: $sp-4 solid $borderGrey;
+  }
+
+  &-buttons {
+    &-add {
+      @include buttonCard($sp-12);
+      width: fit-content;
     }
 
-    &-buttons {
-        &-add {
-            @include buttonCard($sp-12);
-            width: fit-content;
-        }
-
-        &-delete {
-            background-color: $white;
-            border: none;
-        }
+    &-delete {
+      background-color: $white;
+      border: none;
     }
+  }
 }
 
 .task-card {
-    @include buttonCard($sp-12);
+  @include buttonCard($sp-12);
 }
 
-.icon-style{
-    @include iconStyle();
- }
- 
+.icon-style {
+  @include iconStyle();
+}

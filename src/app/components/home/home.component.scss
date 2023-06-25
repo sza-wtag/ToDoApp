@@ -3,16 +3,16 @@
 @import "src/styles/_mixins.scss";
 
 .home-container {
-    margin: $sp-20*7 $sp-36*4 0 $sp-36*4;
-    padding: 0;
+  margin: $sp-20 * 7 $sp-36 * 4 0 $sp-36 * 4;
+  padding: 0;
 }
 
 .add-one-task-icon {
-    @include displayAlign(flex, center, center);
-    margin-top: $sp-36;
+  @include displayAlign(flex, center, center);
+  margin-top: $sp-36;
 }
 
-.add-one-task-icon button{
-   background-color: $bodyGrey;
-   border: none;
+.add-one-task-icon button {
+  background-color: $bodyGrey;
+  border: none;
 }
