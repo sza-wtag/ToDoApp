@@ -6,7 +6,6 @@ import { DEFAULT_IMAGE_TEXT } from 'src/constants/constant';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-
 export class HeaderComponent {
   imgText = DEFAULT_IMAGE_TEXT;
   logoIconUrl = "../../../assets/icons/logo.svg";
