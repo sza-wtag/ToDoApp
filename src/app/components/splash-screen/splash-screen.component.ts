@@ -3,7 +3,6 @@ import { UtilityService } from 'src/app/services/utility.service';
 import { DEFAULT_IMAGE_TEXT } from "src/constants/constant";
 import { ICONS } from 'src/assets/icons/icons';
 
-
 @Component({
   selector: 'app-splash-screen',
   templateUrl: './splash-screen.component.html',
@@ -11,10 +10,10 @@ import { ICONS } from 'src/assets/icons/icons';
   encapsulation: ViewEncapsulation.None
 })
 export class SplashScreenComponent implements OnInit, OnDestroy {
-  showSplash: boolean;
-  readonly imgText= DEFAULT_IMAGE_TEXT;
-  timeoutID: ReturnType<typeof setTimeout> ;
   readonly iconImageUrl = ICONS.LOGO;
+  readonly imgText= DEFAULT_IMAGE_TEXT;
+  private timeoutID: ReturnType<typeof setTimeout>;
+  showSplash: boolean;
 
   constructor(private utilityService: UtilityService) {}
 
