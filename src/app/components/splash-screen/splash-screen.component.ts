@@ -13,19 +13,19 @@ import { ICONS } from 'src/assets/icons/icons';
 export class SplashScreenComponent implements OnInit , OnDestroy {
   showSplash: boolean;
   readonly imgText= DEFAULT_IMAGE_TEXT;
-  timeOutID: number;
+  timeoutID: number;
   readonly iconImageUrl = ICONS.LOGO;
 
-  constructor(private _utilityService: UtilityService) {}
+  constructor(private utilityService: UtilityService) {}
 
   ngOnInit() {
-    this.showSplash = this._utilityService.showSplash;
-    this.timeOutID =   window.setTimeout(() => {
+    this.showSplash = this.utilityService.showSplash;
+    this.timeoutID = window.setTimeout(() => {
       this.showSplash = false
     }, 2000);
   }
 
   ngOnDestroy() {
-    clearTimeout(this.timeOutID);
+    clearTimeout(this.timeoutID);
   }
 } 
