@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy , ViewEncapsulation } from '@angular/core';
 import { UtilityService } from 'src/app/services/utility.service';
 import {DEFAULT_IMAGE_TEXT} from "src/constants/constant";
+import { ICONS } from 'src/assets/icons/icons';
+
 
 @Component({
   selector: 'app-splash-screen',
@@ -10,9 +12,9 @@ import {DEFAULT_IMAGE_TEXT} from "src/constants/constant";
 })
 export class SplashScreenComponent implements OnInit , OnDestroy {
   showSplash: boolean;
-  imgText= DEFAULT_IMAGE_TEXT;
+  readonly imgText= DEFAULT_IMAGE_TEXT;
   timeOutID: number;
-  iconImageUrl = "../../../assets/icons/logo.svg";
+  readonly iconImageUrl = ICONS.LOGO;
 
   constructor(private _utilityService: UtilityService) {}
 
@@ -24,7 +26,6 @@ export class SplashScreenComponent implements OnInit , OnDestroy {
   }
 
   ngOnDestroy() {
-      clearTimeout(this.timeOutID);
-    }
+    clearTimeout(this.timeOutID);
   }
- 
+} 

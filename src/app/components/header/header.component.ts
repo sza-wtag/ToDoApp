@@ -9,7 +9,7 @@ import { ICONS } from 'src/assets/icons/icons';
 })
 
 export class HeaderComponent {
-  imgText = DEFAULT_IMAGE_TEXT;
-  logoIconUrl =ICONS.LOGO;
-  searchIconUrl = ICONS.SEARCH;
+  readonly imgText = DEFAULT_IMAGE_TEXT;
+  readonly logoIconUrl =ICONS.LOGO;
+  readonly searchIconUrl = ICONS.SEARCH;
 }
