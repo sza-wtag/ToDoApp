@@ -1,17 +1,13 @@
 @import "src/styles/_variables.scss";
 @import "src/styles/_colors.scss";
 @import "src/styles/_mixins.scss";
+@import "src/styles/_reuse.scss";
 
 .app-splash-screen {
   @include backgroundPosition($white, fixed, 0);
   @include displayAlign(flex, center, center);
   @include dimension(100%, 100%);
   z-index: 100;
-
-  &-inner {
-    display: flex;
-    align-items: center;
-  }
 
   &-label {
     @include appLabelStyle(700, $sp-48 * 2);

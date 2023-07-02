@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DEFAULT_IMAGE_TEXT } from 'src/constants/constant';
+import { ICONS } from 'src/assets/icons/icons';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,7 @@ import { DEFAULT_IMAGE_TEXT } from 'src/constants/constant';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  imgText = DEFAULT_IMAGE_TEXT;
-  logoIconUrl = '../../../assets/icons/logo.svg';
-  searchIconUrl = '../../../assets/icons/searchIcon.svg';
+  readonly imgText = DEFAULT_IMAGE_TEXT;
+  readonly logoIconUrl = ICONS.LOGO;
+  readonly searchIconUrl = ICONS.SEARCH;
 }
