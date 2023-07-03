@@ -1,0 +1,57 @@
+@import "src/styles/_mixins.scss";
+@import "src/styles/_variables.scss";
+@import "src/styles/_colors.scss";
+
+.header {
+  @include backgroundPosition($white, absolute, 0);
+  border: $sp-2 solid $grey;
+  border-radius: $sp-4;
+
+  &-content {
+    @include displayAlign(flex, center, space-between);
+    @include dimension(100%, 100%);
+  }
+
+  &-logo-label {
+    display: flex;
+    vertical-align: middle;
+  }
+
+  &-label {
+    @include headerLabelStyle($sp-36, $sp-12);
+  }
+
+  &-search-button {
+    background-color: $white;
+    border: none;
+  }
+
+  &_search-button img {
+    height: $sp-24;
+  }
+}
+
+// Small devices
+@media (max-width: 768px) {
+  .header {
+    @include headerStyle($sp-48, $sp-20, $sp-20);
+
+    &-label {
+      @include headerLabelStyle($sp-24, $sp-8);
+    }
+  }
+}
+
+// Medium devices
+@media ((min-width: 768px) and (max-width: 1024px)) {
+  .header {
+    @include headerStyle($sp-36 * 2, $sp-36 * 2, $sp-36 * 2);
+  }
+}
+
+// Large devices
+@media (min-width: 1024px) {
+  .header {
+    @include headerStyle($sp-36 * 2, $sp-20 * 5, $sp-20 * 5);
+  }
+}
