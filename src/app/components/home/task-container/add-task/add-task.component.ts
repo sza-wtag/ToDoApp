@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TaskFactoryService } from 'src/app/services/task-factory.service';
 import { TaskService } from 'src/app/services/task.service';
-import { UtilityService } from 'src/app/services/utility.service';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -12,11 +11,14 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 export class AddTaskComponent {
   faDelete = faTrash;
   taskName: string;
+  @Input()
+  showAddTask: boolean;
+  @Output()
+  notify: EventEmitter<boolean> = new EventEmitter<boolean>()
 
   constructor(
     private taskService: TaskService,
     private taskFactoryService: TaskFactoryService,
-    public utilityService: UtilityService
   ) {}
 
   onAddTask() {
@@ -28,11 +30,11 @@ export class AddTaskComponent {
     }
 
     this.taskName = '';
-    this.utilityService.showAddTask = false;
+    this.notify.emit(false);
   }
 
   hideAddTaskCard() {
-    this.utilityService.showAddTask = false;
+    this.notify.emit(false);
     this.taskName = '';
   }
 }

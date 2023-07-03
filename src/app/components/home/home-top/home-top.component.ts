@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { UtilityService } from 'src/app/services/utility.service';
 
 @Component({
   selector: 'app-home-top',
@@ -10,9 +9,13 @@ import { UtilityService } from 'src/app/services/utility.service';
 export class HomeTopComponent {
   faPlus = faPlus;
 
-  constructor(private utilityService: UtilityService) {}
+  @Input() 
+  showAddTask: boolean;
 
-  showAddTask() {
-    this.utilityService.showAddTask = true;
+  @Output()
+  notify: EventEmitter<boolean> = new EventEmitter<boolean>()
+
+  toggleShowAddTask() {
+    this.notify.emit(!this.showAddTask);
   }
 }

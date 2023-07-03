@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { faTrash, faCheck, faPen } from '@fortawesome/free-solid-svg-icons';
 import { Task } from 'src/app/models/task.model';
 import { TaskService } from 'src/app/services/task.service';
-import { UtilityService } from 'src/app/services/utility.service';
 
 @Component({
   selector: 'app-task-container',
@@ -10,15 +9,23 @@ import { UtilityService } from 'src/app/services/utility.service';
   styleUrls: ['./task-container.component.scss'],
 })
 export class TaskContainerComponent implements OnInit {
-  faDelete = faTrash;
-  faDone = faCheck;
-  faEdit = faPen;
+  readonly faDelete = faTrash;
+  readonly faDone = faCheck;
+  readonly faEdit = faPen;
   tasks: Task[] = [];
 
-  constructor(
-    private taskService: TaskService,
-    public utilityService: UtilityService
-  ) {}
+  @Input()
+  showAddTask: boolean;
+
+  @Output()
+  notify: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  constructor(private taskService: TaskService) {}
+
+  toggleShowAddTask(status: boolean) {
+    this.showAddTask = status;
+    this.notify.emit(this.showAddTask);
+  }
 
   ngOnInit(): void {
     this.tasks = this.taskService.getTasks();

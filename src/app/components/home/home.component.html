@@ -1,12 +1,15 @@
 <div class="home-container">
-  <app-home-top></app-home-top>
-  <app-task-container></app-task-container>
-  <div
-    class="add-one-task-icon"
-    *ngIf="tasks.length <= 0 && !utilityService.showAddTask"
-  >
+  <app-home-top
+    [showAddTask]="showAddTask"
+    (notify)="getShowAddTask($event)"
+  ></app-home-top>
+  <app-task-container
+    [showAddTask]="showAddTask"
+    (notify)="getShowAddTask($event)"
+  ></app-task-container>
+  <div class="add-one-task-icon" *ngIf="tasks.length <= 0 && !showAddTask">
     <button (click)="showAddTaskCard()">
-      <img [alt]="imgText" [src]="addOneIconUrl"/>
+      <img [alt]="imgText" [src]="addOneIconUrl" />
     </button>
   </div>
 </div>

@@ -1,7 +1,6 @@
 import { Icons } from 'src/assets/icons/icons';
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { TaskService } from 'src/app/services/task.service';
-import { UtilityService } from 'src/app/services/utility.service';
 import { DEFAULT_IMAGE_TEXT } from 'src/constants/constant';
 
 @Component({
@@ -9,15 +8,21 @@ import { DEFAULT_IMAGE_TEXT } from 'src/constants/constant';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-
 export class HomeComponent {
-  imgText: string = DEFAULT_IMAGE_TEXT;
-  addOneIconUrl = Icons.addOne;
-  tasks = this.taskService.getTasks();
+  readonly imgText: string = DEFAULT_IMAGE_TEXT;
+  readonly addOneIconUrl = Icons.addOne;
+  protected tasks = this.taskService.getTasks();
+  protected showAddTask = false;
 
-  constructor(private taskService: TaskService, public utilityService: UtilityService){}
+  constructor(
+    private taskService: TaskService,
+  ) {}
 
   showAddTaskCard() {
-    this.utilityService.showAddTask = true;
+    this.showAddTask = true;
+  }
+
+  getShowAddTask(status: boolean){
+    this.showAddTask = status
   }
 }
