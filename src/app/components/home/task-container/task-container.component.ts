@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faTrash, faCheck, faPen } from '@fortawesome/free-solid-svg-icons';
 import { Task } from 'src/app/models/task.model';
-import { TaskFactoryService } from 'src/app/services/task-factory.service';
 import { TaskService } from 'src/app/services/task.service';
 import { UtilityService } from 'src/app/services/utility.service';
 
@@ -17,12 +16,11 @@ export class TaskContainerComponent implements OnInit {
   tasks: Task[] = [];
 
   constructor(
-    private _taskService: TaskService,
-    private _taskFactoryService: TaskFactoryService,
-    public _utilityService: UtilityService
+    private taskService: TaskService,
+    public utilityService: UtilityService
   ) {}
 
   ngOnInit(): void {
-    this.tasks = this._taskService.getTasks();
+    this.tasks = this.taskService.getTasks();
   }
 }

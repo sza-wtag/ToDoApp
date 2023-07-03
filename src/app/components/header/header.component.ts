@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DEFAULT_IMAGE_TEXT } from 'src/constants/constant';
-import { ICONS } from 'src/assets/icons/icons';
+import { Icons } from 'src/assets/icons/icons';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +9,6 @@ import { ICONS } from 'src/assets/icons/icons';
 })
 export class HeaderComponent {
   readonly imgText = DEFAULT_IMAGE_TEXT;
-  readonly logoIconUrl = ICONS.LOGO;
-  readonly searchIconUrl = ICONS.SEARCH;
+  readonly logoIconUrl = Icons.logo;
+  readonly searchIconUrl = Icons.search;
 }

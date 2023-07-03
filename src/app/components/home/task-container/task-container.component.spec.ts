@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TaskContainerComponent } from './task-container.component';
 
 describe('TaskContainerComponent', () => {
@@ -8,7 +7,7 @@ describe('TaskContainerComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TaskContainerComponent]
+      declarations: [TaskContainerComponent],
     });
     fixture = TestBed.createComponent(TaskContainerComponent);
     component = fixture.componentInstance;

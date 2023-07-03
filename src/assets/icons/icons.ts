@@ -1,4 +1,5 @@
-export const ICONS = {
-  LOGO: 'assets/icons/logo.svg',
-  SEARCH: 'assets/icons/searchIcon.svg',
-}
+export const Icons = {
+  logo: 'assets/icons/logo.svg',
+  search: 'assets/icons/searchIcon.svg',
+  addOne: 'assets/icons/addOne.svg',
+};

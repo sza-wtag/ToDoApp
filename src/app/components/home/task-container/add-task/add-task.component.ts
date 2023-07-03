@@ -14,25 +14,25 @@ export class AddTaskComponent {
   taskName: string;
 
   constructor(
-    private _taskService: TaskService,
-    private _taskFactoryService: TaskFactoryService,
-    public _utilityService: UtilityService
+    private taskService: TaskService,
+    private taskFactoryService: TaskFactoryService,
+    public utilityService: UtilityService
   ) {}
 
   onAddTask() {
     this.taskName = this.taskName.replace(/^\s+|\s+$/gm, '').trim();
     if (this.taskName) {
-      this._taskService.addTask(
-        this._taskFactoryService.createTask(this.taskName)
+      this.taskService.addTask(
+        this.taskFactoryService.createTask(this.taskName)
       );
     }
 
     this.taskName = '';
-    this._utilityService.showAddTask = false;
+    this.utilityService.showAddTask = false;
   }
 
   hideAddTaskCard() {
-    this._utilityService.showAddTask = false;
+    this.utilityService.showAddTask = false;
     this.taskName = '';
   }
 }

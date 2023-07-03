@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { TaskFactoryService } from './task-factory.service';
 
 describe('TaskFactoryService', () => {
