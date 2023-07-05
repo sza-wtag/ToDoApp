@@ -14,6 +14,10 @@ export class SplashScreenComponent implements OnInit, OnDestroy {
   private timeoutID: ReturnType<typeof setTimeout>;
   protected showSplash = true;
 
+  setShowSplash(status: boolean) {
+    this.showSplash = status;
+  }
+
   ngOnInit() {
     this.timeoutID = setTimeout(() => {
       this.showSplash = false;
