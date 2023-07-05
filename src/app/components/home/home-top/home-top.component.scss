@@ -1,0 +1,28 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_colors.scss";
+@import "src/styles/_mixins.scss";
+
+.home-top {
+  margin-bottom: $sp-12;
+
+  &-label {
+    font-size: $sp-4 * 7;
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-filter-buttons button {
+    @include buttonCard($sp-12);
+    width: fit-content;
+    margin-right: $sp-8;
+  }
+
+  &-create-button {
+    color: $white;
+    @include buttonCard($sp-12);
+    background-color: $blue;
+  }
+}

@@ -1,40 +1,52 @@
 @import "../styles/colors";
 
-@mixin headerStyle($height, $paddinRight, $paddingLeft ) {
-    height: $height;
-    padding-left: $paddingLeft;
-    padding-right: $paddinRight;
+@mixin headerStyle($height, $paddinRight, $paddingLeft) {
+  height: $height;
+  padding-left: $paddingLeft;
+  padding-right: $paddinRight;
 }
 
 @mixin headerLabelStyle($fontSize, $paddingLeft) {
-    font-size: $fontSize;
-    color: $blue;
-    padding-left: $paddingLeft;
+  font-size: $fontSize;
+  color: $blue;
+  padding-left: $paddingLeft;
 }
 
 @mixin backgroundPosition($color, $position, $val) {
-    background-color: $color;
-    position: $position;
-    top: $val;
-    left: $val;
-    right: $val;
-    bottom: $val;
+  background-color: $color;
+  position: $position;
+  top: $val;
+  left: $val;
+  right: $val;
+  bottom: $val;
 }
 
-@mixin displayAlign($dispaly, $align, $justify){
-    display: $dispaly;
-    align-items: $align;
-    justify-content: $justify;
+@mixin displayAlign($dispaly, $align, $justify) {
+  display: $dispaly;
+  align-items: $align;
+  justify-content: $justify;
 }
 
-@mixin appLabelStyle($fWeight, $fSize){
-    color: $blue;
-    font-weight: $fWeight;
-    font-size: $fSize;
-    text-align: center;
+@mixin appLabelStyle($fWeight, $fSize) {
+  color: $blue;
+  font-weight: $fWeight;
+  font-size: $fSize;
+  text-align: center;
 }
 
-@mixin dimension($height, $width){
-    height: $height;
-    width: $width;
+@mixin dimension($height, $width) {
+  height: $height;
+  width: $width;
+}
+@mixin buttonCard($padding) {
+  padding: $padding;
+  background: $white;
+  border: $sp-2 solid $borderGrey;
+  border-radius: $sp-4;
+}
+
+@mixin iconStyle() {
+  margin-right: $sp-24 !important;
+  font-size: $sp-24;
+  color: $secondaryTextGrey;
 }

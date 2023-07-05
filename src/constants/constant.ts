@@ -1,1 +1,1 @@
-export const  DEFAULT_IMAGE_TEXT = 'Icon image';
+export const DEFAULT_IMAGE_TEXT = 'Icon image';

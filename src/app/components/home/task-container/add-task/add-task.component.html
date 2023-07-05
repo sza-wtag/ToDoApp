@@ -1,0 +1,16 @@
+<div class="add-task-card task-card">
+  <textarea
+    class="add-task-card-name"
+    rows="5"
+    cols="33"
+    [(ngModel)]="taskName"
+  ></textarea>
+  <div class="add-task-card-buttons">
+    <button (click)="onAddTask()" class="add-task-card-buttons-add">
+      Add Task
+    </button>
+    <button (click)="hideAddTaskCard()" class="add-task-card-buttons-delete">
+      <fa-icon class="icon-style" [icon]="faDelete"></fa-icon>
+    </button>
+  </div>
+</div>

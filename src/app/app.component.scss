@@ -1,0 +1,7 @@
+@import "../styles/_mixins.scss";
+@import "../styles/_colors.scss";
+
+.main-app-container {
+  @include dimension(100%, 100%);
+  @include backgroundPosition($bodyGrey, absolute, 0);
+}
