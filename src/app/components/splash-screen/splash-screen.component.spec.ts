@@ -8,9 +8,9 @@ describe('SplashScreenComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SplashScreenComponent]
+      declarations: [SplashScreenComponent],
     });
-    
+
     fixture = TestBed.createComponent(SplashScreenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -21,16 +21,20 @@ describe('SplashScreenComponent', () => {
   });
 
   it('should display app-splash-screen component if showSplash is true', () => {
-    component.setShowSplash(true)
+    component.setShowSplash(true);
     fixture.detectChanges();
-    const addSplashScreen = fixture.debugElement.query(By.css('.app-splash-screen'));
+    const addSplashScreen = fixture.debugElement.query(
+      By.css('.app-splash-screen')
+    );
     expect(addSplashScreen).toBeTruthy();
   });
 
   it('should not display app-splash-screen component if showSplash is false', () => {
-    component.setShowSplash(false)
+    component.setShowSplash(false);
     fixture.detectChanges();
-    const addSplashScreen = fixture.debugElement.query(By.css('.app-splash-screen'));
+    const addSplashScreen = fixture.debugElement.query(
+      By.css('.app-splash-screen')
+    );
     expect(addSplashScreen).toBeFalsy();
   });
 });
