@@ -26,6 +26,10 @@ export class TaskContainerComponent implements OnInit {
     this._taskService.deleteTask(deleteTaskId);
   }
 
+  onCompleteTask(completedTaskId: number){
+    this._taskService.updateTaskStatus(completedTaskId);
+  }
+
   ngOnInit(): void {
     this.tasks = this._taskService.getTasks();
   }

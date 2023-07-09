@@ -11,24 +11,40 @@
 .task-card {
   @include buttonCard($sp-12);
 
-  &-name {
-    margin-top: 0;
-    color: #32394b;
-  }
+    &-name {
+        margin-top: 0;
+        color: #32394B;
+    }
+    
+    &-name-done {
+        margin-top: 0;
+        color: $green;
+    }
 
   &-time {
     font-size: 14px;
     color: $secondaryTextGrey;
   }
 
-  &-buttons {
-    display: flex;
-  }
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
 
-  &-button {
-    background-color: $white;
-    border: none;
-  }
+        &-buttons {
+            display: flex;
+        }
+
+        &-button {
+            background-color: $white;
+            border: none;   
+        }
+
+        &-complete {
+            color:$white;
+            @include buttonCard($sp-8);
+            background-color:$blue;   
+        }
+    }
 }
 
 .icon-style {

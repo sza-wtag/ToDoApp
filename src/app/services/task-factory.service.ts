@@ -15,7 +15,8 @@ export class TaskFactoryService {
       id: TaskFactoryService.currentId++,
       name: taskName,
       status: false,
-      createDate: formatDate (new Date(), 'dd.MM.YY', 'en')
+      createDate: formatDate (new Date(), 'dd.MM.YY', 'en'),
+      daysToComplete: "",
     } 
   }
 }
